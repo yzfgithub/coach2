@@ -1,0 +1,48 @@
+{
+	"name": "vue-coach-wechat",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"start": "npm run test",
+		"test": "VUE_APP_ENV=dev vue-cli-service --mode development serve",
+		"prod": "VUE_APP_ENV=prod vue-cli-service --mode production serve",
+		"pd": "npm run pp && npm run pb && npm run pc",
+		"td": "npm run pp && npm run tb && npm run pc",
+		"pb": "rm -rf pdist && VUE_APP_ENV=prod vue-cli-service build --mode production && mv dist pdist",
+		"tb": "rm -rf tdist && VUE_APP_ENV=dev vue-cli-service build --mode test && mv dist tdist",
+		"pp": "git reset --hard && git pull && npm install",
+		"pc": "git add . && git commit -m 'deploy' && git push",
+		"pm2": "pm2 deploy production",
+		"lint": "vue-cli-service lint"
+	},
+	"dependencies": {
+		"ali-oss": "^6.4.0",
+		"amfe-flexible": "^2.2.1",
+		"axios": "^0.19.0",
+		"cube-ui": "^1.12.26",
+		"moment": "^2.24.0",
+		"vue": "^2.6.10",
+		"vue-router": "^3.0.3",
+		"vuex": "^3.0.1"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "^3.8.0",
+		"@vue/cli-plugin-eslint": "^3.8.0",
+		"@vue/cli-service": "^3.8.0",
+		"@vue/eslint-config-airbnb": "^4.0.0",
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.16.0",
+		"eslint-plugin-vue": "^5.0.0",
+		"postcss-px2rem": "^0.3.0",
+		"stylus": "^0.54.5",
+		"stylus-loader": "^3.0.2",
+		"vue-cli-plugin-cube-ui": "^0.2.5",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"transformModules": {
+		"cube-ui": {
+			"transform": "cube-ui/src/modules/${member}",
+			"kebabCase": true
+		}
+	}
+}

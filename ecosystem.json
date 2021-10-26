@@ -1,0 +1,24 @@
+{
+  "apps" : [
+    {
+      "name": "server",
+      "script": "build/build.js",
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production" : {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy" : {
+    "production" : {
+      "user" : "root",
+      "host" : "172.16.237.113 -p 53808",
+      "ref"  : "origin/master",
+      "repo" : "git@gitlab.weilaicheng.com:Front-end/vue-coach-wechat.git",
+      "path" : "/data/fesrc/vue-coach-wechat",
+      "post-deploy" : "git pull"
+    }
+  }
+}

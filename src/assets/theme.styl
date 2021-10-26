@@ -1,0 +1,42 @@
+// 基本尺寸相关
+$common-page-left = 20px
+$common-page-padding = 0 $common-page-left
+$dialog-radius = 10px
+
+$dialog-z-index = 100
+$footer-z-index = 10
+
+// 基本颜色相关
+$btn-disable-bgc = #FFD2C3
+$btn-bgc = #F8542E
+$active-color = $btn-bgc
+$input-title-color = #C7C7C7
+$input-text-color = #666666
+
+// 字体大小相关
+$input-title-font = 14px
+$input-text-font = 15px
+
+// 字体相关
+$medium() {
+  font-family PingFangSC-Medium
+}
+$regular() {
+  font-family PingFangSC-Regular
+}
+
+
+
+$input-title() {
+  color $input-title-color
+  font-size $input-title-font
+  $regular()
+}
+$input-text() {
+  color $input-text-color
+  font-size $input-text-font
+  $regular()
+}
+$input-placeholder() {
+  $input-title()
+}
