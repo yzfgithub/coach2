@@ -1,11 +1,11 @@
 const { isPro } = require('@/tool/env');
 
-const oss_host = isPro ? 'http://p.oss.kuaipeilian.com' : 'http://oss.weilaicheng.com';
-const base_url = isPro ? 'http://p.coachwechat.kuaipeilian.com' : 'http://coachwechat.weilaicheng.com';
+const oss_host = isPro ? '' : 'http://oss.wem';
+const base_url = isPro ? 'http://p.coacheilian.com' : 'httpicheng.com';
 const avatar_oss_host = isPro
-  ? 'https://yundi-public-prd.oss-cn-hangzhou.aliyuncs.com/'
-  : 'https://yundi-public.oss-cn-hangzhou.aliyuncs.com/';
-const resumeHost = isPro ? 'http://p.parent.kuaipeilian.com' : 'http://parent.weilaicheng.com';
+  ? 'https://yuubncs.com/'
+  : 'https://yus.com/';
+const resumeHost = isPro ? 'httkuian.com' : 'http://peng.com';
 
 export function findIndex(ary, fn) {
   if (ary.findIndex) {
